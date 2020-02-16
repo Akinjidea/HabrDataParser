@@ -1,0 +1,21 @@
+﻿<Window x:Class="Diplom.Converting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="Converting" Height="225" Width="500" ResizeMode="NoResize" Background="LightGray" WindowStartupLocation="CenterScreen">
+    <Grid TextBlock.FontSize="14">
+        <Label Margin="-140,30,0,0" HorizontalAlignment="Center">Choose table of DB</Label>
+        <ComboBox Name="comboxDB" Width="125" Height="25" Margin="140,30,0,0" VerticalAlignment="Top"
+                  SelectionChanged="ComboxSelectionJS" HorizontalAlignment="Center"/>
+        <Label Margin="0,70,0,0" HorizontalAlignment="Center">Input values</Label>
+        
+        <TextBox Name="boxConvertingData" Margin="0,45,0,0" Width="350" Height="40" 
+                 HorizontalAlignment="Center" PreviewTextInput="NumberValidationTextBox"
+                 CommandManager.PreviewExecuted="TextBoxPreviewExecuted" ContextMenu="{x:Null}" IsReadOnly="True" Background="#EEEEEE"/>        
+        <Button Width="70" Height="25" VerticalAlignment="Center" Margin="0,130,0,0" Click="ConvertingChoosen" >OK</Button>
+
+    </Grid>
+</Window>
